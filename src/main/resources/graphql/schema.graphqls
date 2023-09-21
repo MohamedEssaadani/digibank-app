@@ -1,0 +1,27 @@
+type Query{
+    getCustomersList: [Customer],
+    getCustomerById(id: String): Customer,
+    getCustomerByIdentityNumber(identityNumber: String): Customer,
+    searchCustomers(searchParams: [SearchParams]): [Customer],
+    getAccountsList: [Account],
+}
+
+
+type Customer{
+    id: String,
+    fullName: String,
+    identityCardNumber: String,
+    identityCardType: String
+}
+
+type Account{
+    id: String,
+    accountNumber: String,
+    currencyID: String,
+    balance: String
+}
+
+input SearchParams {
+    key: String,
+    value: String
+}

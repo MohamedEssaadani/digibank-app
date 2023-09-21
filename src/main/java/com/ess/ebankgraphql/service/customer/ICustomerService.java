@@ -6,4 +6,5 @@ import com.ess.ebankgraphql.service.generics.IGenericeService;
 
 public interface ICustomerService extends IGenericeService<CustomerDTO, Customer> {
 
+    CustomerDTO findByIdentityNumber(String identityNumber);
 }

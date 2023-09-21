@@ -22,6 +22,7 @@ public class Account {
     private String accountNumber;
     private Long currencyID;
     private BigDecimal balance;
+    private Long contractID;
     private Date createdAt;
     private Date updatedAt;
 

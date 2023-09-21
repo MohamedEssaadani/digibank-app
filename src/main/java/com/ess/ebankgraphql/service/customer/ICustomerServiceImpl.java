@@ -64,8 +64,7 @@ public class ICustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public CustomerDTO findByID(Long id)
-    {
+    public CustomerDTO findByID(Long id) {
         // find customer by id
         Optional<Customer> customer = customerRepository.findById(id);
         CustomerDTO customerDTO = new CustomerDTO();
@@ -74,6 +73,17 @@ public class ICustomerServiceImpl implements ICustomerService {
         if (customer.isPresent())
             customerDTO = Customer.toCustomerDTO(customer.get());
 
+        return customerDTO;
+    }
+
+    @Override
+    public CustomerDTO findByIdentityNumber(String identityNumber) {
+        Customer customer = customerRepository.findByIdentityCardNumber(identityNumber);
+        CustomerDTO customerDTO = new CustomerDTO();
+
+        if (customer != null) {
+            customerDTO = Customer.toCustomerDTO(customer);
+        }
         return customerDTO;
     }
 }
