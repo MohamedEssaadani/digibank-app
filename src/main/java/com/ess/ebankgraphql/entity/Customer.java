@@ -35,6 +35,7 @@ public class Customer {
                 .fullName(customerDTO.getFullName())
                 .identityCardNumber(customerDTO.getIdentityCardNumber())
                 .identityCardType(customerDTO.getIdentityCardType())
+                .contractID(customerDTO.getContractID())
                 .build();
 
     }

@@ -14,6 +14,6 @@ public class CustomerDTO {
     private Long id;
     private String fullName;
     private String identityCardNumber;
-
     private IdentityCardType identityCardType;
+    private Long contractID;
 }

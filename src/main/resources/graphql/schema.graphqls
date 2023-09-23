@@ -4,6 +4,7 @@ type Query{
     getCustomerByIdentityNumber(identityNumber: String): Customer,
     searchCustomers(searchParams: [SearchParams]): [Customer],
     getAccountsList: [Account],
+    getContractsList: [Contract],
 }
 
 
@@ -19,6 +20,11 @@ type Account{
     accountNumber: String,
     currencyID: String,
     balance: String
+}
+
+type Contract{
+    contractNumber: String,
+    contractTitle: String
 }
 
 input SearchParams {
