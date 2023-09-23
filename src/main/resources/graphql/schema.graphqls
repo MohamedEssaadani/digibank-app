@@ -5,9 +5,18 @@ type Query{
     searchCustomers(searchParams: [SearchParams]): [Customer],
     getAccountsList: [Account],
     getContractsList: [Contract],
+    getContractByNumber(contractNumber: String): Contract,
+    getContractByTitle(contractTitle: String): Contract
 }
 
+type Mutation{
+    createContract(contractDTO: contractDTO): Contract
+}
 
+input contractDTO{
+    contractNumber: String,
+    contractTitle: String
+}
 type Customer{
     id: String,
     fullName: String,

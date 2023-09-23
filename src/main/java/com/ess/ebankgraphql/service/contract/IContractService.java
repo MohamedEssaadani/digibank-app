@@ -5,4 +5,7 @@ import com.ess.ebankgraphql.entity.Contract;
 import com.ess.ebankgraphql.service.generics.IGenericeService;
 
 public interface IContractService extends IGenericeService<ContractDTO, Contract> {
+    ContractDTO findByContractNumber(String contractNumber);
+
+    ContractDTO findByContractTitle(String contractTitle);
 }
